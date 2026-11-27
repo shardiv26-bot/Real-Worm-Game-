@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Worm Garden Adventure - SJKT Vivekananda</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="app">
+<header class="school-header"><img class="school-logo" src="https://sekolah2u.com/storage/2023/04/298675964_474520528016209_8153385497004013829_n.jpg" alt="SJKT Vivekananda school crest"><div><b>SJKT VIVEKANANDA</b><small>A little English learning adventure 🌱</small></div></header>
+<section id="home" class="panel">
+<div class="hero"><div><p class="tag">🐛 A CUTE ENGLISH PUZZLE GAME</p><h1>Worm Garden<br><span>Adventure!</span></h1><p>Help the wiggly worms escape, answer English questions and collect stars!</p></div><div class="hero-art">🌷 🐛 🌻<br>🦋 🌼 🍄</div></div>
+<div class="people-scene"><div class="person student"><span>🧒🏻👧🏻</span><b>Happy Students</b><small>Ready to learn!</small></div><div class="speech">Let’s learn English and win prizes! ✨</div><div class="person teacher"><span>👩🏻‍🏫</span><b>Kind Teacher</b><small>You can do it!</small></div></div>
+<h2>🌸 Choose your garden</h2><p class="muted">Choose your challenge! Every level has 10 English questions and a garden full of wiggly worms.</p>
+<div class="levels">
+<button data-level="beginner" class="level pink"><big>🌷</big><b>Beginner</b><small>Happy Classroom Garden</small><small>30 worms · 10 questions · 7 lives</small><strong>Let's play →</strong></button>
+<button data-level="intermediate" class="level blue"><big>🦋</big><b>Intermediate</b><small>Teacher Cheer Zone</small><small>45 worms · 10 questions · 5 lives</small><strong>Let's play →</strong></button>
+<button data-level="expert" class="level green"><big>🌳</big><b>Expert</b><small>Thunder Gaming Arena</small><small>50 worms · 10 questions · 3 lives</small><strong>Let's play →</strong></button>
+</div><button id="instructions" class="plain">💡 How to play</button>
+</section>
+<section id="game" class="panel hidden">
+<div class="gamehead"><div><p class="tag" id="gardenName">FLOWER GARDEN</p><h2>Let's untangle the worms!</h2></div><button id="homeBtn" class="soft">⌂ Home</button></div>
+<div class="coach-strip" id="coachStrip"><span class="coach-student">🧒🏻👧🏻</span><span>Teacher says: “You’re doing amazing! Keep going!”</span><span class="coach-teacher">👩🏻‍🏫</span></div>
+<div class="stats"><div>❤️ Lives <b id="lives">7</b></div><div>⭐ Stars <b id="stars">0</b></div><div>🐛 Escaped <b id="escaped">0</b>/<span id="totalWorms">30</span></div><div>📘 Questions <b id="questionsDone">0</b>/10</div></div>
+<div class="progress"><div id="progressbar"></div></div>
+<p class="muted center">Tap a worm. It moves in the direction its eyes face. If blocked, answer a question!</p>
+<div class="boardwrap"><svg id="board" viewBox="0 0 500 500" aria-label="Worm puzzle board"></svg></div>
+<div class="actions"><button id="hint" class="soft">✨ Hint</button><button id="restart" class="soft">↻ Restart</button><button id="change" class="soft">🌈 Change level</button><button id="gameHow" class="soft">❔ How to play</button></div>
+</section>
+<footer>Made with love for curious learners 💚</footer>
+</main>
+<div id="questionModal" class="shade hidden"><div class="modal"><button class="x" data-close="questionModal">×</button><div class="bigemoji">📚</div><p class="tag" id="qcount">QUESTION 1 OF 10</p><h2>English time!</h2><p id="passage" class="passage hidden"></p><p id="question"></p><div id="answers"></div><p id="feedback" aria-live="polite"></p></div></div>
+<div id="helpModal" class="shade hidden"><div class="modal"><button class="x" data-close="helpModal">×</button><div class="bigemoji">🌻</div><h2>How to play</h2><ol><li>Tap a worm on the board.</li><li>It moves in the direction its eyes are facing.</li><li>If another worm blocks its way, answer an English question.</li><li>A correct answer earns a star. A wrong answer loses one life.</li><li>Help all the worms escape to finish the level and earn a garden medal!</li></ol><button class="primary" data-close="helpModal">Got it!</button></div></div>
+<div id="endModal" class="shade hidden"><div class="modal"><div class="bigemoji" id="endEmoji">🎉</div><h2 id="endTitle">Well done!</h2><p id="endMessage"></p><p>⭐ Stars: <b id="finalStars">0</b></p><div id="prizeBadge" class="prize-badge">🏅 Garden Champion</div><div id="confetti" class="confetti"></div><button id="again" class="primary">Play again</button><button id="endHome" class="soft">Choose another level</button></div></div>
+<div id="toast" class="toast hidden"></div>
+<script src="script.js"></script>
+</body></html>
